@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "streamlit-object-detection"
+version = "0.1.0"
+description = "Using Streamlit and Docker to deploy an object detection app"
+authors = ["Trung Dan Phan <trung-dan.phan@hec.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit-searchbox = "^0.1.17"
+streamlit = "^1.38.0"
+opencv-python-headless = "^4.10.0.84"
+pillow = "^10.4.0"
+numpy = "^2.1.1"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
