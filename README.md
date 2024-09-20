@@ -34,15 +34,32 @@ This will create a virtual environment and install all necessary packages for th
 
 The Streamlit application is containerized with Docker for easy deployment across different environments. Follow the steps below to build and run the application using Docker.
 
-1. **Build the Docker image:**
+1. **Clone the repository:**
 
-   In the root directory of the repository, run the following command to build the Docker image:
+   First, clone the repository to your local machine using the following command:
+   ```bash
+   https://github.com/Trung-Dan-Phan/streamlit-portfolio.git
+   ```
+
+2. Navigate to the project directory:
+
+   Change into the project directory where the Dockerfile is located:
+   ```bash
+   cd your-repository
+   ```
+
+   Replace `your-repository` with the name of your project directory.
+
+
+3. **Build the Docker image:**
+
+   Open the terminal, and in the root directory of the repository, run the following command to build the Docker image:
 
    ```bash
    docker build -t streamlit-app .
    ```
 
-2. **Run the Docker container:**
+4. **Run the Docker container:**
 
    Once the image is built, you can run the container with:
 
