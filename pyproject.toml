@@ -13,6 +13,7 @@ opencv-python-headless = "^4.10.0.84"
 pillow = "^10.4.0"
 numpy = "^2.1.1"
 pandas = "^2.2.2"
+matplotlib = "^3.9.2"
 
 
 [build-system]
