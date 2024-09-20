@@ -9,7 +9,15 @@ from configs.config import CLASSES, COLORS, DEFAULT_CONFIDENCE_THRESHOLD, MODEL,
 
 @st.cache_data
 def process_image(image):
-    # Pre-processing for MobileNet SSD (Caffe)
+    """
+    Pre-process an image for object detection using the MobileNet SSD model.
+
+    Parameters:
+    image (np.ndarray): The input image in the form of a NumPy array.
+
+    Returns:
+    np.ndarray: The detections returned by the MobileNet SSD model.
+    """
     blob = cv2.dnn.blobFromImage(
         cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5
     )
@@ -18,11 +26,22 @@ def process_image(image):
     detections = net.forward()
     return detections
 
-
 @st.cache_data
 def annotate_image(
     image, detections, confidence_threshold=DEFAULT_CONFIDENCE_THRESHOLD, show_boxes=True
 ):
+    """
+    Annotate an image with bounding boxes and labels based on object detection results.
+
+    Parameters:
+    image (np.ndarray): The input image in the form of a NumPy array.
+    detections (np.ndarray): The object detections returned by the MobileNet SSD model.
+    confidence_threshold (float): Minimum confidence threshold for displaying detections.
+    show_boxes (bool): Whether to draw bounding boxes around detected objects.
+
+    Returns:
+    Tuple[np.ndarray, list]: The annotated image and a list of labels for detected objects.
+    """
     (h, w) = image.shape[:2]
     labels = []
     if show_boxes:
@@ -45,6 +64,15 @@ def annotate_image(
 
 @st.cache_data
 def convert_image_to_bytes(image):
+    """
+    Convert a PIL image to a bytes object for download.
+
+    Parameters:
+    image (PIL.Image.Image): The PIL image to be converted.
+
+    Returns:
+    bytes: The image in PNG format as a bytes object.
+    """
     img_buffer = BytesIO()
     image.save(img_buffer, format="PNG")  # Save the PIL image as PNG to the buffer
     img_bytes = img_buffer.getvalue()  # Get the binary content
@@ -66,7 +94,6 @@ st.markdown(
     Once processed, you can download the annotated image and review a summary of the detected objects.
     """
 )
-
 
 # File uploader for images
 img_file_buffer = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
