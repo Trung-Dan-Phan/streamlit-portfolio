@@ -5,13 +5,9 @@ This repository contains a set of data science projects showcased through a Stre
 ## Projects
 
 ### 1. **Object Recognition Model using MobileNet SSD**
-The first project is an object recognition system built using the MobileNet Single Shot Detector (SSD) model. MobileNet SSD is a lightweight and efficient neural network model for detecting objects in images or video streams. This project demonstrates:
-
-- How to fine-tune and deploy an object recognition model.
-- Use of pre-trained models (MobileNet) for transfer learning in object detection.
-- Implementation of the MobileNet SSD model for real-time object detection.
+The first project is an object recognition system built using the MobileNet Single Shot Detector (SSD) model. MobileNet SSD is a lightweight and efficient neural network model for detecting objects in images.
   
-Users can upload an image or video through the Streamlit interface, and the model will identify and label objects within the media. The focus is on efficient deployment for real-world applications, making use of lightweight architecture to handle real-time processing tasks.
+Users can upload an image through the Streamlit interface, and the model will identify and label objects within the media. The focus is on efficient deployment for real-world applications, making use of lightweight architecture to handle real-time processing tasks.
 
 ### 2. **Tennis Head-to-Head Analytics Dashboard**
 The second project is a data analytics tool that visualizes head-to-head statistics of tennis matches between two players. This interactive dashboard enables users to:
@@ -33,11 +29,6 @@ poetry install
 ```
 
 This will create a virtual environment and install all necessary packages for the application to run.
-
-Key dependencies include:
-- **Streamlit** for the web-based user interface.
-- **TensorFlow** and **OpenCV** for the object recognition model.
-- **Matplotlib**, **Pandas**, and **Plotly** for data visualization in the tennis analytics dashboard.
   
 ## Running the Streamlit App Using Docker
 
@@ -64,5 +55,5 @@ The Streamlit application is containerized with Docker for easy deployment acros
 ## How to Use the Application
 
 Once the Streamlit app is running, you can interact with the projects as follows:
-- **Object Recognition**: Upload an image or video file, and the model will process it to identify objects within the media.
+- **Object Recognition**: Upload an image file (you can take jpg files in the `images` folder for inspiration), and the model will process it to identify objects within the media.
 - **Tennis Analytics**: Input the names of two tennis players, and the dashboard will display head-to-head statistics, match history, and more.
