@@ -74,3 +74,9 @@ The Streamlit application is containerized with Docker for easy deployment acros
 Once the Streamlit app is running, you can interact with the projects as follows:
 - **Object Recognition**: Upload an image file (you can take jpg files in the `images` folder for inspiration), and the model will process it to identify objects within the media.
 - **Tennis Analytics**: Input the names of two tennis players, and the dashboard will display head-to-head statistics, match history, and more.
+
+## Documentation
+
+- [Docker](https://docs.docker.com/get-started/)
+- [Streamlit](https://docs.streamlit.io/get-started)
+- [Poetry](https://python-poetry.org/docs/)
