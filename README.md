@@ -45,10 +45,10 @@ The Streamlit application is containerized with Docker for easy deployment acros
 
    Change into the project directory where the Dockerfile is located:
    ```bash
-   cd your-repository
+   cd path/to/project-directory
    ```
 
-   Replace `your-repository` with the name of your project directory.
+   Replace `path/to/project-directory` with the actual path to the project directory.
 
 
 3. **Build the Docker image:**
