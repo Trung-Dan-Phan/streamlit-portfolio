@@ -38,7 +38,7 @@ The Streamlit application is containerized with Docker for easy deployment acros
 
    First, clone the repository to your local machine using the following command:
    ```bash
-   https://github.com/Trung-Dan-Phan/streamlit-portfolio.git
+   git clone https://github.com/Trung-Dan-Phan/streamlit-portfolio.git
    ```
 
 2. Navigate to the project directory:
